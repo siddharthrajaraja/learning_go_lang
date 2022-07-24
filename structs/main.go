@@ -17,7 +17,7 @@ func (p Person) printPerson() {
 	fmt.Printf("\n%+v\n", p)
 }
 
-func (p Person) updateName(newFirstName string) {
+func (p *Person) updateName(newFirstName string) {
 	p.firstName = newFirstName
 }
 
@@ -44,7 +44,7 @@ func WaysToCreateStruct() {
 	fmt.Println(monu)
 	fmt.Printf("%+v", monu)
 	monu.printPerson()
-	monu.updateName("Tonu")
+	(&monu).updateName("Tonu")
 	monu.printPerson()
 }
 
