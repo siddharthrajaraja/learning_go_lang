@@ -13,6 +13,14 @@ type ContactInfo struct {
 	zipCode int
 }
 
+func (p Person) printPerson() {
+	fmt.Printf("\n%+v\n", p)
+}
+
+func (p Person) updateName(newFirstName string) {
+	p.firstName = newFirstName
+}
+
 func WaysToCreateStruct() {
 	// Way 1 : Not recommended , if fields in druct definition swapped
 	siddharth := Person{"Siddharth", "raja", ContactInfo{"siddharthraja9849@gmail.com", 123}}
@@ -35,7 +43,9 @@ func WaysToCreateStruct() {
 	}
 	fmt.Println(monu)
 	fmt.Printf("%+v", monu)
-
+	monu.printPerson()
+	monu.updateName("Tonu")
+	monu.printPerson()
 }
 
 func main() {
