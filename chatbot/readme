@@ -1,0 +1,2 @@
+What are interfaces in go lang?
+When function have different incoming arg types but have same functionality use interfaces
